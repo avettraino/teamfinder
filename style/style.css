@@ -13,12 +13,64 @@ header
 	
 }
 
-#logo
+.titre_header
 {
+	animation-duration :2s;
+	animation-iteration-count : 1;
+	-webkit-animation-fill-mode : forwards;
+	animation-fill-mode : forwards;
+	animation-name : titre_header;
+	font-family: play;
+	color : white;
+	font-size : 34px;
 	margin-left : 540px;
-	width : 255px;
-	height : 159px;
+	margin-top : -15px;
+	position : absolute;
 }
+
+@keyframes titre_header
+{
+	from {
+      margin-left: 0%;
+      
+    }
+    
+    to {
+      margin-left: 43%;  
+    }
+}
+
+
+.logo
+{
+	 opacity:0;
+    -moz-animation: anim 0.5s linear forwards 2s;
+    animation: anim 0.5s linear forwards 2s;
+	/*animation-name : logo;*/
+	margin-top : 20px;
+	width : 120px;
+	height : 40px;
+	
+}
+@-moz-keyframes anim {
+   0%  {opacity:0;}
+   50% {opacity:0.8;}
+   100% {opacity:1;}
+}
+#logo1
+{
+	margin-left : 561px;
+	margin-top : 21px;
+}
+
+#logo2
+{
+	margin-left : 656px;
+	margin-top : 24px;
+	
+}
+
+
 
 
 /* POLICE */
@@ -128,19 +180,10 @@ header
 	width : 320px;
 }
 
-.titre_header
-{
-	
-	font-family: play;
-	color : white;
-	font-size : 34px;
-	margin-left : 570px;
-	margin-top : 46px;
-	position : absolute;
-}
 
 
-.slogan
+
+/*.slogan
 {
 	
 	animation-duration :2s;
@@ -154,7 +197,7 @@ header
 	margin-top : -135px;
 	position : relative;
 	
-}
+}*/
 
 #div_deco
 {
@@ -251,7 +294,7 @@ ul#menu_horizontal li
 	border : solid black 1px;
 	padding : 12px 5px;
 	font-family : play;
-	font-size : 30px;
+	font-size : 23px;
 	color : white;
 	background-color : rgb(10,24,64);
 	
@@ -259,7 +302,7 @@ ul#menu_horizontal li
 
 #menu_horizontal li:hover
 {
-	font-size : 31px;
+	font-size : 24px;
 	background-color : rgb(22,45,115);
 	
 }
@@ -272,7 +315,7 @@ ul#menu_horizontal
 
 #menu_horizontal
 {
-	margin-left : 105px;
+	margin-left : 255px;
 	
 }
 
