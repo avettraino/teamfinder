@@ -1,0 +1,45 @@
+#logo
+{
+	width : 1333px;
+	border-radius : 15px;
+}
+
+
+
+#div_index_co
+{
+	background-color : rgba(0,0,0,0.3);
+	color : white;
+	width : 300px;
+	padding : 15px;
+	border-radius : 10px;
+	position : relative;
+	margin-left : 505px;
+	margin-top : -750px;
+}
+
+#text_conn
+{
+	font-size : 25px;
+	font-family : play;
+}
+
+#form_co
+{
+
+	font-family : play;
+}
+#confirm_co
+{
+	
+	border : solid black 2px;
+	border-radius : 10px;
+	margin-left : 450px;
+	margin-top : 50px;
+	width : 140px;
+	padding : 15px;
+}
+#div_co_mdp
+{
+	margin-left : 10px;
+}

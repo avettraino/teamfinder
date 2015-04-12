@@ -1,0 +1,713 @@
+
+/* HEADER */
+
+header
+{
+	
+	height : 160px;
+	width : 1333px;
+	background-color : black;
+	border-radius : 15px;
+
+	border : ridge black 2px;
+	
+}
+
+#logo
+{
+	margin-left : 540px;
+	width : 255px;
+	height : 159px;
+}
+
+
+/* POLICE */
+@font-face {
+    font-family: 'play';
+    src: url('play.ttf');
+}
+
+@font-face {
+    font-family: 'script';
+    src: url('Brotherhood_Script.ttf');
+}
+
+
+/* PAGE INDEX */
+
+#boutton_submit_index
+{
+	margin-left : 90px;
+	margin-top : 10px;
+	width : 130px;
+	height : 50px;
+}
+
+#boutton_submit_index:hover
+{
+	background-color :  rgb(22,45,115);
+	color : white;
+	font-size : 20px;
+}
+
+#co_auto
+{
+	margin-top : 10px;
+}
+
+#link_insc
+{
+	color  : blue;
+}
+
+#text_conn
+{
+	font-family : play;
+	font-size : 23px;
+	text-align: center;
+	color : white;
+}
+
+#img_back_co
+{
+	height : 350px;
+	width :550px;
+	position : relative;
+	position : absolute;
+	margin-left : 700px;
+	margin-top : -70px;
+	border-radius : 15px;
+}
+
+#div_index_co
+{
+	background-color : rgba(0,0,0,0.3);
+	color : white;
+	width : 300px;
+	padding : 15px;
+	border-radius : 10px;
+	position : relative;
+	margin-left : 805px;
+	margin-top : -50px;
+}
+
+#form_co
+{
+	margin-top : 90px;
+	font-family : play;
+}
+#confirm_co
+{
+	
+	border : solid black 2px;
+	border-radius : 10px;
+	margin-left : 450px;
+	margin-top : 50px;
+	width : 140px;
+	padding : 15px;
+}
+#div_co_mdp
+{
+	margin-left : 10px;
+}
+
+
+#text_acceuil
+{
+	list-style-type : none;
+	position : absolute;
+}
+
+#enjoy
+{
+	font-family : script;
+	font-size : 82px;
+	position : relative;
+	margin-top : -85px;
+	margin-left : 160px;
+	width : 320px;
+}
+
+.titre_header
+{
+	
+	font-family: play;
+	color : white;
+	font-size : 34px;
+	margin-left : 570px;
+	margin-top : 46px;
+	position : absolute;
+}
+
+
+.slogan
+{
+	
+	animation-duration :2s;
+	animation-iteration-count : 1;
+	-webkit-animation-fill-mode : forwards;
+	animation-fill-mode : forwards;
+	animation-name : slogan;
+	font-family: play;
+	color : white;
+	font-size : 40px;
+	margin-top : -135px;
+	position : relative;
+	
+}
+
+#div_deco
+{
+	width : 200px;
+	height : 50px;
+	position : absolute;
+	border : solid black 1px;
+	border-radius : 10px;
+	background-color : rgba(0,0,0,0.7);
+	margin-top : -530px;
+	margin-left : 570px;
+}
+
+/* CREATION GROUPES */
+
+#boutton_crea_grp
+{
+	margin-left : 80px;
+	margin-top : 10px;
+	
+	width : 130px;
+	height : 50px;
+}
+
+#boutton_crea_grp:hover
+{
+	background-color :  rgb(22,45,115);
+	color : white;
+	font-size : 20px;
+}
+
+.titre_crea_grp
+{
+	animation-duration :2s;
+	animation-iteration-count : 1;
+	-webkit-animation-fill-mode : forwards;
+	animation-fill-mode : forwards;
+	animation-name : titre_crea_grp;
+	font-family:script;
+	color : white;
+	font-size : 40px;
+	margin-top : -533px;
+	position : absolute;
+}
+
+@keyframes titre_crea_grp
+{
+	from {
+      margin-left: 0%;
+      
+    }
+    
+    to {
+      margin-left: 43%;  
+    }
+}
+
+
+#text_h1
+{
+	font-size : 20px;
+	margin-left : 50px;
+}
+
+
+
+
+@keyframes slogan
+{
+	from {
+      margin-left: 0%;
+      
+    }
+    
+    to {
+      margin-left: 14%;
+	  
+      
+    }
+	
+	
+}
+
+
+
+/* MENU NAVIGATION */
+ul#menu_horizontal li
+ {
+	transition-property : color;
+	transition-duration : 3s;
+	
+	display : inline;
+	padding : 0 0.5em; /* Pour espacer les boutons entre eux */
+	border : solid black 1px;
+	padding : 12px 5px;
+	font-family : play;
+	font-size : 30px;
+	color : white;
+	background-color : rgb(10,24,64);
+	
+}
+
+#menu_horizontal li:hover
+{
+	font-size : 31px;
+	background-color : rgb(22,45,115);
+	
+}
+
+ul#menu_horizontal 
+{
+	list-style-type : none; /* Car sinon les puces se placent n'importe où */
+	
+}
+
+#menu_horizontal
+{
+	margin-left : 105px;
+	
+}
+
+#menu_horizontal a
+{
+	color : white;
+	text-decoration : none;
+}
+
+/* PAGE INSCRIPTION */
+
+#img_back_insc
+{
+	position : absolute;
+	margin-left : 250px;
+	width : 850px;
+	height : 390px;
+}
+
+#formulaire
+{
+position : relative;
+height : 350px;
+	background-color : rgba(0, 0, 0, 0.7);
+	border-radius : 15px;
+	margin-top :30px;
+	margin-left : 480px;
+	color :white;
+	width : 400px;
+	padding-left : 50px;
+	padding-top : 20px;
+	font-family : script;
+	font-size :42px;
+
+}
+
+.text_insc
+{
+	animation-duration :2s;
+	animation-iteration-count : 1;
+	-webkit-animation-fill-mode : forwards;
+	animation-fill-mode : forwards;
+	animation-name : text_insc;
+	margin-top : -20px;
+	font-size : 70px;
+}
+
+@keyframes text_insc
+{
+	from {
+      margin-left: 0%;
+      
+    }
+    
+    to {
+      margin-left: 25%;
+	  
+      
+    }
+	
+	
+}
+
+#div_insc_pseudo
+{
+	margin-left : 45px;
+	margin-top : -60px;
+}
+
+#box_mdp2
+{
+	margin-left : 125px;
+	position : relative;
+	margin-top : 35px;
+	
+}
+
+#div_insc_mdp
+{
+	margin-top : -15px;
+	position : absolute;
+}
+
+
+
+
+
+
+/* PAGE NEXT_INSCRIPTION */
+
+#boutton_submit_next
+{
+	margin-top : 20px;
+	margin-left :590px;
+	width : 130px;
+	height : 50px;
+}
+
+
+#boutton_submit_next:hover
+{
+	background-color :  rgb(22,45,115);
+	color : white;
+	font-size : 20px;
+}
+
+#text_info_prof
+{
+	text_align : center;
+	font-family : play;
+	font-size : 20px;
+	color : white;
+	margin-left : 65px;
+	margin-top : -150px;
+}
+
+#info_supp
+{
+
+margin-left : 500px;
+margin-top : -20px;
+color : white;
+width : 300px;
+height : 340px;
+	padding : 25px ;
+	padding-left : 20px;
+	background-color : rgba(0,0,0,0.7);
+	border-radius : 15px;
+	font-family : script;
+	font-size : 40px;
+}
+
+#div_insc_mail
+{
+	
+	margin-left : 25px;
+}
+
+#div_insc_age
+{
+	margin-top : 0px;
+	margin-left : 55px;
+}
+
+#box_age
+{
+	width : 30px;
+}
+
+#div_insc_ville
+{
+	margin-top : 0px;
+	margin-left : 55px;
+}
+
+#div_insc_sexe
+{
+	margin-top : 0px;
+	margin-left : 55px;
+}
+#div_insc_amour
+{
+	margin-top : 0px;
+	margin-left : 30px;
+}
+
+#div_insc_locom
+{
+	margin-top : 0px;
+	margin-left : 8px;
+}
+
+#div_photo_prof
+{
+	margin-left :500px;
+	color : white;
+	font-family : script;
+	font-size : 40px;
+	
+	width : 600px;
+}
+
+#text_photo
+{
+	
+	border : solid black 1px;
+	background-color : rgba(0,0,0,0.7);
+	border-radius : 15px;
+	width : 150px;
+}
+
+#boutton_submit
+{
+	margin-left : 105px;
+	margin-top : 10px;
+	
+	width : 130px;
+	height : 50px;
+}
+
+#boutton_submit:hover
+{
+	background-color :  rgb(22,45,115);
+	color : white;
+	font-size : 20px;
+}
+
+
+
+
+
+#img_back_memb
+{
+	margin-left : 150px;
+	position : relative;
+}
+
+#affichage_photo
+{
+	width : 50px;
+	height : 80px;
+	margin-left : 630px;
+	margin-top : 30px;
+	position : absolute;
+	border : ridge brown 2px;
+	border-radius : 10px;
+}
+
+#img_crea_grp
+{
+	margin-left : 270px;
+	position : relative;
+}
+
+#nom_crea_grp
+{
+	margin-left : 35px;
+}
+
+#devise_grp
+{
+	margin-left : 21px;
+}
+#form_crea_grp
+{
+	position : absolute;
+	margin-top : -370px;
+	margin-left : 450px;
+	border : solid black 1px;
+	border-radius : 10px;
+	background-color : rgba(0,0,0,0.7);
+	color : white;
+	font-family :script;
+	font-size : 30px;
+	padding : 10px;
+}
+
+#nb_pers_grp
+{
+	margin-left : 17px;
+}
+#explic_grp
+{
+	border : solid black 1px;
+	border-radius : 10px;
+	padding : 10px;
+	background-color : rgba(0,0,0,0.7);
+	color : white;
+	width : 360px;
+	position : absolute;
+	margin-top : -450px;
+	margin-left : 300px;
+}
+
+#text_crea_grp
+{
+	text-decoration : none;
+	font-family : play;
+	border : solid black 1px;
+	border-radius : 10px;
+	padding : 8px;
+	background-color : rgba(0,0,0,0.7);
+	color : white;
+	position : absolute;
+	margin-left : -447px;
+	margin-top : 180px;
+	
+}
+
+#text_crea_grp:hover
+{
+	background-color :  rgba(22,45,115,0.7);
+	border : solid turquoise 1px;
+}
+
+#text_rej_grp
+{
+	text-decoration : none;
+	font-family : play;
+	border : solid black 1px;
+	border-radius : 10px;
+	padding : 8px;
+	background-color : rgba(0,0,0,0.7);
+	color : white;
+	position : absolute;
+	margin-left : -327px;
+	margin-top : 180px;
+}
+
+#text_rej_grp:hover
+{
+	background-color :  rgba(22,45,115,0.7);
+	border : solid turquoise 1px;
+}
+
+#back_next_insc
+{
+	position : absolute;
+	margin-left : 230px;
+	margin-top : 5px;
+	width : 930px;
+	height : 560px;
+}
+
+#img_memb_conf
+{
+	margin-left : 220px;
+}
+
+#form_next_insc
+{
+	margin-top : 50px;
+	margin-bottom : 100px;
+	position: relative;
+	width : 250px;
+}
+
+
+#titre_next_insc
+{
+	margin-left : 310px;
+	font-size : 25px;
+	position :relative;
+	color : white;
+	margin-top : 30px;
+}
+
+#text_groupe
+{
+	font-size : 20px;
+margin-left : 15px;	
+font-family : play;
+}
+
+#box_groupe
+{
+	margin-left : 50px;
+	
+}
+
+#box_nb_pers
+{
+	margin-top : -25px;
+	margin-left : 50px;
+}
+
+#div_insc_groupe
+{
+	margin-left : 380px;
+	border :solid black 1px;
+	padding : 15px;
+	border-radius : 10px;
+	background-color : rgba(0,0,0,0.5);
+	position : absolute;
+	color : white;
+	width : 250px;
+}
+
+#div_rejoin_grp
+{
+	position : relative;
+	margin-left : 680px;
+	color : white;
+	width : 265px;
+	padding : 15px;
+	border : solid black 1px;
+	border-radius : 10px;
+	background-color : rgba(0,0,0,0.5);
+	margin-top : 50px;
+}
+
+/* PAGE MEMBRE_CONF */
+
+/*#memb_conf_grp
+{
+	border : solid black 1px;
+	border-radius : 10px;
+	background-color : rgba(0,0,0,0.7);
+	width :320px;
+	padding : 15px;
+	height : 200px;
+	position : absolute;
+	margin-left : 330px;
+	margin-top : -550px;
+}*/
+
+#txt_grp_memb
+{
+margin-left : 330px;
+	margin-top : -550px;
+	position : absolute;
+	color : white ;
+	font-family : script;
+	font-size : 50px;
+	text-align : center;
+	margin-top : -10px;
+	border : solid black 1 px;
+	border-radius : 10px;
+	background-color : rgba(22,45,115,0.5);
+}
+
+
+
+
+
+
+
+
+
+
+footer
+{
+	height : 200px;
+	width : 1333px;
+	background-color : black;
+	margin-top : 20px;
+	border-radius : 15px;
+}
