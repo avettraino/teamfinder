@@ -45,6 +45,9 @@ header
 {
 	 opacity:0;
     -moz-animation: anim 0.5s linear forwards 2s;
+	 -webkit-animation: anim 0.5s linear forwards 2s;
+    -o-animation: anim 0.5s linear forwards 2s;
+    -ms-animation: anim 0.5s linear forwards 2s;
     animation: anim 0.5s linear forwards 2s;
 	/*animation-name : logo;*/
 	margin-top : 20px;
@@ -55,6 +58,27 @@ header
 @-moz-keyframes anim {
    0%  {opacity:0;}
    50% {opacity:0.8;}
+   100% {opacity:1;}
+}
+
+@-webkit-keyframes anim {
+   0%  {opacity:0;}
+    50% {opacity:0.8;}
+   100% {opacity:1;}
+}
+@-o-keyframes anim {
+   0%  {opacity:0;}
+    50% {opacity:0.8;}
+   100% {opacity:1;}
+}
+@-ms-keyframes anim {
+   0%  {opacity:0;}
+    50% {opacity:0.8;}
+   100% {opacity:1;}
+}
+@keyframes anim {
+   0%  {opacity:0;}
+    50% {opacity:0.8;}
    100% {opacity:1;}
 }
 #logo1
