@@ -33,7 +33,7 @@
 						</div>
 				
 						<div id="div_insc_sexe">
-							<label id="text_sexe"> Sexe </label> : 
+							<label id="text_sexe"> Genre </label> : 
 							<select name="sexe" id="sexe">
 								<option value="Homme">Homme</option>
 								<option value="Femme">Femme</option>

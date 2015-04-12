@@ -35,7 +35,7 @@
 		$sql_pseudo -> execute(array(":pseudo" => $pseudo));
 		if (($sql_pseudo->rowCount() != 0))
 		{
-			$erreur_inscription = "<p>Ce pseudo n'est pas disponible</p>";
+			$erreur_inscription .= "<p>Ce pseudo n'est pas disponible</p>";
 		}
 		$sql_pseudo->closeCursor();
 		//Si il n'y a aucune erreur alors on passe a la suite de l'inscription
@@ -64,7 +64,7 @@
 			<img src="image/blue.JPG" id="img_back_insc"/>
 			<div id="formulaire">
 			<p class="text_insc">Inscription<p>
-				<form method="post" action="inscription.php" enctype="multipart/form-data">
+				<form method="post" action="inscription.php">
 					<div id="div_insc_pseudo">
 					<label id="text_pseudo">Pseudo</label> :<input type="text" name ="pseudo" placeholder="Votre Pseudo" id="box_pseudo" > 
 					</div>
