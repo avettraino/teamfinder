@@ -61,7 +61,7 @@
 		  <section>
 			<article>
 			<br />
-				<h1 id="text_h1"><b><u> Ce QUE vous pouvez faire sur TeamFinder.fr, gratuitement :</u></b> </h1> 
+				<h1 id="text_h1"><b><u> Ce que vous pouvez faire sur TeamFinder.fr, gratuitement :</u></b> </h1> 
 				<ul id="text_acceuil">
 					<li> - Vous inscrire et profiter de notre site pour <b>rencontrer des groupes d'amis avec vos amis</b> ! </li>
 					<li>- Postez des photos de vos soirees lors des rencontres avec d'autre groupe et <b>donner votre <br />avis</b> ! </li>
