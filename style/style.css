@@ -20,11 +20,11 @@ header
 	-webkit-animation-fill-mode : forwards;
 	animation-fill-mode : forwards;
 	animation-name : titre_header;
-	font-family: play;
+	font-family : play;
+	font-size : 32px;
+	margin-left : 572px;
+	margin-top : 73px;
 	color : white;
-	font-size : 34px;
-	margin-left : 540px;
-	margin-top : -15px;
 	position : absolute;
 }
 
@@ -41,14 +41,263 @@ header
 }
 
 
+
+
+
+
+
+
+
+#img_back_co2
+{
+	width : 1340px;
+	height : 900px;
+	position :absolute;
+}
+
+#titros
+{
+	font-family : play;
+	font-size : 32px;
+	margin-left : 572px;
+	margin-top : 73px;
+	color : white;
+	position : absolute;
+}
+
+#a
+{
+	position :absolute;
+	margin-left : 557px;
+	margin-top : 39px;
+}
+
+#b
+{
+	position : absolute;
+	margin-top : 107px;
+	margin-left : 650px;
+}
+
+
+#bloc
+{
+	width : 500px;
+	height : 284px;
+	position : absolute;
+	background-color : rgba(255,255,255,0.3);
+	margin-left : 412px;
+	margin-top : 211px;
+	border : double black 1px;
+	border-radius : 20px;
+}
+
+#bloc_crea_grp
+{
+	background-color : rgba(22,45,115,0.7);
+	border-radius : 20px;
+	border : double black 1px;
+	width : 200px;
+	height : 200px;
+	margin-left : 35px;
+	margin-top : 30px;
+	position : absolute;
+}
+
+#bloc_co_grp
+{
+	background-color : rgba(22,45,115,0.7);
+	border-radius : 20px;
+	border : double black 1px;
+	width : 200px;
+	height : 200px;
+	margin-left : 264px;
+	margin-top : 30px;
+	
+}
+
+#titre_crea_grp
+{
+	font-family: play;
+color: #FFF;
+font-size: 25px;
+margin-left: -2px;
+margin-top: 0px;
+border: solid black 1px;
+border-radius: 20px;
+padding: 6px 10px;
+height: 35px;
+width: 182px;
+background-color : rgba(10,24,64,0.6);
+}
+
+#boutton_creation_grp
+{
+	    margin-left: 66px;
+    background-color: white;
+    border-radius: 94px;
+    width: 70px;
+    height: 70px;
+    font-size: 38px;
+}
+
+#saisie_insc_grp
+{
+	margin-left : 31px;
+}
+
+#boutton_submit_creation
+{
+margin-top: 12px;
+margin-left: 63px;
+font-family: play;
+border-radius: 37px;
+height: 78px;
+border: 1px solid #000;
+width: 75px;
+}
+
+#boutton_submit_creation:hover
+{
+	
+    box-shadow: 0px 0px 10px white;
+}
+
+
+#titre_co_grp
+{
+	font-family: play;
+color: #FFF;
+font-size: 25px;
+margin-left: -2px;
+margin-top: 0px;
+border: solid black 1px;
+border-radius: 20px;
+padding: 6px 46px;
+height: 35px;
+width: 110px;
+background-color: rgba(10,24,64,0.6);
+}
+
+#boutton_submit_conn
+{
+	margin-left: 59px;
+margin-top: 37px;
+font-family: play;
+border-radius: 37px;
+height: 74px;
+border: 1px solid #000;
+width: 78px;
+}
+
+#boutton_submit_conn:hover
+{
+	box-shadow: 0px 0px 10px white;
+}
+
+
+#dsc_teamfinder
+{
+	color: white;
+position: absolute;
+margin-top: 184px;
+margin-left: 565px;
+}
+
+a:hover,a:focus
+{
+	background:rgba(0,0,0,.4); box-shadow:0 1px 0 rgba(255,255,255,.4); 
+}
+
+a span
+{
+position: absolute;
+color: white;
+background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.7);
+padding: 15px;
+border-radius: 20px;
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+transform: scale(0) rotate(-12deg);
+transition: all 1s ease 0s;
+opacity: 0;
+margin-left: 150px;
+margin-top: -174px;
+width: 237px;
+}
+
+
+a:hover span, a:focus span
+{
+ transform:scale(1) rotate(0);
+ opacity:1;
+}
+
+#titre_bulle
+{
+border-radius: 20px;
+background-color: rgba(10, 24, 63, 0.6);
+color: #FFF;
+width: 90px;
+margin-top: -15px;
+margin-left: -14px;
+font-size: 15px;
+padding: 16px 88px;
+}
+
+
+#titre_bulle2
+{
+border-radius: 20px;
+background-color: rgba(10, 24, 63, 0.6);
+color: #FFF;
+width: 113px;
+margin-top: 0px;
+padding: 16px 77px;
+margin-left: -14px;
+font-size: 15px;
+}
+
+
+#box_info_memb
+{
+	width: 441px;
+height: 500px;
+background-color: rgba(10,24,63,0.6);
+position: absolute;
+border-radius: 20px;
+margin-left: 448px;
+margin-top: 223px;
+border : solid black 1px;
+}
+
+#consigne_prenom
+{
+	color: #FFF;
+padding: 0px 69px;
+font-family: play;
+font-size: 51px;
+margin-top: 15px;
+}
+
+#box_info
+{
+	background-color: rgba(22, 5, 115, 0.6);
+width: 148px;
+height: 77px;
+padding: 38px 25px;
+margin-left: 124px;
+border-radius: 20px;
+}
+
+
 .logo
 {
 	 opacity:0;
-    -moz-animation: anim 0.5s linear forwards 2s;
-	 -webkit-animation: anim 0.5s linear forwards 2s;
-    -o-animation: anim 0.5s linear forwards 2s;
-    -ms-animation: anim 0.5s linear forwards 2s;
-    animation: anim 0.5s linear forwards 2s;
+    -moz-animation: anim 1s linear forwards 7s;
+	 -webkit-animation: anim 1s linear forwards 2s;
+    -o-animation: anim 1s linear forwards 2s;
+    -ms-animation: anim 1s linear forwards 2s;
+    animation: anim 1s linear forwards 2s;
 	/*animation-name : logo;*/
 	margin-top : 20px;
 	width : 120px;
