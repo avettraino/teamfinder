@@ -1,55 +1,89 @@
 
 			
 <?php 
+session_start();
 try
 {
 	$bdd = new PDO('mysql:host=localhost;dbname=site2', 'root', '');
 	array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 	
-if (isset($_POST['nom_groupe']) && trim($_POST['nom_groupe']))
-{
+	$num_membre = 1;
+	do
+	{
 						
-	  $nom_groupe = $_POST['nom_groupe'];
-	  $_SESSION['nom_groupe'] = $nom_groupe;
-	  
-	  
-}
-
-if (isset($_POST['nb_pers_groupe']))
-{
-						
-	 $nb_pers = $_POST['nb_pers_groupe'];
-	
-}
-
-if (isset($_POST['mdp_groupe']))
-{
-						
-	 $mdp_groupe = sha1($_POST['mdp_groupe']);
-}
-
-
-$resultat = $bdd->prepare('INSERT INTO groupe(nom_grp, mdp_grp) VALUES(:nom_groupe, :mdp_groupe)');
-$resultat->execute(array('nom_groupe'=>$nom_groupe, 'mdp_groupe' =>$mdp_groupe));
-
-$req = $bdd->prepare('SELECT id_grp FROM groupe WHERE nom_grp = :nom_groupe');
-$req->execute(array('nom_groupe'=>$nom_groupe));
-$resultat2 = $req->fetch();
-$nbr_ligne = $req->rowCount();
-$id = $resultat2["id_grp"] ;
-echo $id;
+	if(isset($_POST["boutton_ajout_membre"]))
+	{		
+		$erreur_ajout_membre = "";
+							
+		$prenom_membre   =   htmlspecialchars(trim($_POST["prenom_membre"]));
+		$age_membre      =   htmlspecialchars(trim($_POST["age_membre"]));
+		$surnom_membre   =   htmlspecialchars(trim($_POST["surnom_membre"]));
+							
+		//Test si tout les champs sont remplis
+		if(empty($prenom_membre) || empty($age_membre) || empty($surnom_membre))
+		{
+			$erreur_ajout_membre .= "<p style='color:red'><strong>- Remplissez tous les champs du formulaire</strong></p>" ;
+		}
+							
+		if(strlen($prenom_membre) > 15)
+		{
+			$erreur_ajout_membre .= "<p style='color:red'><strong>- Votre prenom est trop long\n</strong></p>" ;
+		}
+							
+		if(strlen($surnom_membre) > 15)
+		{
+			$erreur_ajout_membre .= "<p style='color:red'><strong>- Votre surnom est trop long\n</strong></p>" ;
+		}
+							
+		if($age_membre < 10)
+		{
+			$erreur_ajout_membre .= "<p style='color:red'><strong>- Votre age est trop petit\n</strong></p>" ;
+		}
+							
+		if($age_membre > 80)
+		{
+			$erreur_ajout_membre .= "<p style='color:red'><strong>- Votre age est trop grand\n</strong></p>" ;
+		}
+							
+		if($erreur_ajout_membre == "")
+		{
+							
+			if (isset($_POST['prenom_membre']) && trim($_POST['prenom_membre']))
+			{
 								
-$result = $bdd->prepare('INSERT INTO jointure_memb_grp(id_grp) VALUES('.$id.')');
-$result->execute(array());
+				$prenom = $_POST['prenom_membre'];
+				$_SESSION['prenom'] = $prenom;
+			  
+			}
 
+			if (isset($_POST['age_membre']))
+			{
+								
+				$age = $_POST['age_membre'];
+			
+			}
 
-//$resultat = $bdd->prepare('INSERT INTO membre(id_grp) VALUES('.$id.')');
-//$resultat->execute(array());
-//$resultat2 = $bdd->prepare('IN LEFT JOIN joiture_memb_grp ON groupe.id_grp = jointure_memb_grp.id_grp');
-
-/*$var = $resultat2->fetch();
-$nbr_ligne = $resultat2->rowCount();
-$nombre_personne = $var["nb_pers"] ;*/
+			if (isset($_POST['surnom_membre']))
+			{
+								
+				$surnom = $_POST['surnom_membre'];
+			}
+		
+			$resultat4 = $bdd->prepare('INSERT INTO membre(prenom, age, surnom, id_grp) VALUES(:prenom_membre, :age_membre, :surnom_membre, '.$_SESSION['id'].')');
+			$resultat4->execute(array('prenom_membre'=>$prenom, 'age_membre' =>$age, 'surnom_membre' =>$surnom));
+			$num_membre++;
+			
+			$resul = $bdd->prepare('INSERT INTO jointure_memb_grp(id_grp, id_memb) VALUES('.$_SESSION['id'].', '.$num_membre.')');
+			$resul->execute(array());
+					
+			
+			
+			
+									
+		}
+	}
+	
+	}while(isset($_POST['boutton_submit_membre']));
 
 
 }
@@ -72,92 +106,41 @@ catch(Exception $e)
     <body> 		
 		 
 		 
-		<!--  <img src="image/night.JPG" id="img_back_co2"/> -->
+		   <img src="image/night.JPG" id="img_back_co2"/> 
 		   <h1 class="titre_header">TeamFinder</h1>
 		  <img src="image/a.JPG" class ="logo" id="a"/>
 		  <img src="image/b.JPG" class="logo" id="b"/>
 		 <div id="box_info_memb">
+		 <?php $nom_groupe = $_SESSION["nom_groupe"]; ?>
 		 <p id="consigne_prenom"><?php echo $nom_groupe; ?></p>
 				<div id='box_info'>
-						<form method="post" >
+						<form method="post" action="test2.php">
 								<input type="text" name ="prenom_membre" placeholder="Prenom du membre" id="box_creaton_groupe" > 
 								<input type="text" name="age_membre" placeholder="Age du membre" id="box_nb_personnes">
 								<input type="text" name="surnom_membre" placeholder="Surnom du membre" id="box_mdp_grp">
 								</br>
-								<input type="submit" value="Valider" name="boutton_submit_membre"  id="boutton_submit_creation">
+								<input type="submit" value="Valider" name="boutton_submit_membre"  id="boutton_conf_creation">
 								<input type="submit" value="+" name="boutton_ajout_membre"  id="boutton_ajout_creation">
 						</form>
+						
 						<?php
-						$bdd = new PDO('mysql:host=localhost;dbname=site2', 'root', '');
-							array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
-						$num_membre = 1;
-						if (isset($_POST['prenom_membre']) && trim($_POST['prenom_membre']))
-							{
+						if(isset($erreur_ajout_membre) && $erreur_ajout_membre != "")
+						{
+							echo $erreur_ajout_membre ;
+						}
+						else
+						{
+							echo "<p id='conf_ajout_membre''><strong>$prenom    |     $age ans   |    AKA $surnom</strong></p>";
+						}
+						/*$resultat5 = $bdd->prepare('SELECT * FROM membre WHERE id_grp = '.$_SESSION['id'].'');
+						$resultat5->execute(array());*/
+			
 						
-								$prenom = $_POST['prenom_membre'];
-								$_SESSION['prenom'] = $prenom;
-	  
-							}
-
-							if (isset($_POST['age_membre']))
-							{
-						
-								$age = $_POST['age_membre'];
-	
-							}
-
-							if (isset($_POST['surnom_membre']))
-							{
-						
-								$surnom = $_POST['surnom_membre'];
-							}
-							
-							if(isset($_POST["boutton_ajout_membre"]))
-							{
-								$num_membre++;
-								echo $num_membre;
-								$resultat4 = $bdd->prepare('INSERT INTO membre(prenom, age, surnom) VALUES(:prenom_membre, :age_membre, :surnom_membre)');
-								$resultat4->execute(array('prenom_membre'=>$prenom, 'age_membre' =>$age, 'surnom_membre' =>$surnom));
-								
-								$resul = $bdd->prepare('INSERT INTO jointure_memb_grp(id_memb) VALUES('.$num_membre.') WHERE id_grp = '.$id.'');
-								$resul->execute(array());
-							}
-							
-							/*if(isset($_POST["boutton_submit_membre"]))
-							{
-							$resultat4 = $bdd->prepare('INSERT INTO membre(prenom, age, surnom) VALUES(:prenom_membre, :age_membre, :surnom_membre)');
-							$resultat4->execute(array('prenom_membre'=>$prenom, 'age_membre' =>$age, 'surnom_membre' =>$surnom));
-							
-							$req = $bdd->prepare('SELECT id_grp FROM groupe WHERE nom_grp = :nom_groupe');
-$req->execute(array('nom_groupe'=>$nom_groupe));
-$resultat2 = $req->fetch();
-$nbr_ligne = $req->rowCount();
-$id = $resultat2["id_grp"] ;
-echo $id;
-						$result = $bdd->prepare('UPDATE membre SET id_grp = '.$id.' WHERE prenom = :prenom_membre');
-							$result->execute(array());
-							}*/
-					
-				
-						
-							
-							/*for($num_membre = 0; $num_membre < $nombre_personne; $num_membre++)
-							{
-								if(isset($_POST["boutton_submit_membre"]))
-								{
-									$num_membre++;
-									$resultat3 = $bdd->prepare('SELECT prenom, age, surnom FROM membre WHERE prenom = :prenom');
-									$resultat3->execute(array('prenom_membre'=>$prenom));
-									$var2 = $resultat3->fetch();
-									$nbr_ligne = $resultat3->rowCount();
-									$nombre_personne = $var2["nb_pers"] ;
-									header("location:test2.php");
-									/*$resultat5 = $bdd->prepare('INSERT INTO membre(id_grp) SELECT id_grp FROM groupe WHERE id_grp = "'.$lastInsertId.'"');
-							$resultat5->execute(array('id_grp' => $lastInsertId));
-								}
-							}
-							echo $num_membre;*/
+						//style='position: absolute; color: white; border : solid black 1px; padding: 8px 8px; border-radius : 20px; font-size: 26px; margin-left: -150px; background-color : rgba(10, 24, 170, 0.6); width : 425px'
 						?>
+						
+						
+						
 					</div>
 				</div>
 		 

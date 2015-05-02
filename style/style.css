@@ -83,9 +83,9 @@ header
 #bloc
 {
 	width : 500px;
-	height : 284px;
+	height : 350px;
 	position : absolute;
-	background-color : rgba(255,255,255,0.3);
+	background-color : rgba(255,255,255,0.4);
 	margin-left : 412px;
 	margin-top : 211px;
 	border : double black 1px;
@@ -277,17 +277,71 @@ padding: 0px 69px;
 font-family: play;
 font-size: 51px;
 margin-top: 15px;
+text-align : center;
 }
 
 #box_info
 {
 	background-color: rgba(22, 5, 115, 0.6);
 width: 148px;
-height: 77px;
+height: 98px;
 padding: 38px 25px;
 margin-left: 124px;
 border-radius: 20px;
+border : solid black 1px;
 }
+
+#boutton_conf_creation
+{
+margin-top: 28px;
+margin-left: 92px;
+font-family: play;
+border-radius: 37px;
+height: 78px;
+border: 1px solid #000;
+width: 75px;
+}
+
+#boutton_conf_creation:hover
+{
+	
+    box-shadow: 0px 0px 10px white;
+}
+
+#boutton_ajout_creation
+{
+margin-top: -77px;
+border-radius: 58px;
+font-size: 23px;
+position: absolute;
+width: 75px;
+height: 78px;
+margin-left: -20px;
+border: solid black 1px;
+}
+
+#boutton_ajout_creation:hover
+{
+	
+    box-shadow: 0px 0px 10px white;
+}
+
+#conf_ajout_membre
+{
+	position: absolute; 
+	color: white; 
+	border : solid black 1px; 
+	padding: 8px 8px;
+	border-radius : 20px; 
+	font-size: 15px;
+	margin-left: -150px; 
+	background-color : rgba(10, 24, 170, 0.6); 
+	width : 425px;
+	font-family : chrome;
+}
+
+
+
 
 
 .logo
@@ -357,6 +411,10 @@ border-radius: 20px;
     src: url('Brotherhood_Script.ttf');
 }
 
+@font-face {
+    font-family: 'chrome';
+    src: url('Chrome-Normal.ttf');
+}
 
 /* PAGE INDEX */
 
