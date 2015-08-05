@@ -229,6 +229,69 @@ box-shadow: -2px -1px 8px white;
 	
 }
 
+#bouttons_grp
+{
+	
+	border: 1px solid #FFF;
+	border-radius: 12px;
+	padding: 5px;
+}
+
+#boutton_creation_groupe
+{
+
+	width: 70px;
+	cursor:pointer;
+	height: 70px;
+	border-radius: 50px;
+	font-size: 40px;
+}
+
+#boutton_creation_groupe:hover
+{
+	box-shadow : 0px 0px 10px white;
+	font-size : 43px;
+}
+
+#formulaire_creation_groupe
+{
+	display : none;
+	margin-top: 11px;
+	padding: 12px;
+	background-color: rgba(22, 45, 115, 0.7);
+	width: 288px;
+	border-radius: 15px;
+	color: white;
+	font-size: 17px;
+}
+
+#box_statut_grp
+{
+	width: 141px;
+	margin-left: 7px;
+}
+
+#box_creation_grp
+{
+	width: 134px;
+	margin-left: 13px;
+}
+
+#boutton_valider_groupe
+{
+	width: 60px;
+	height: 60px;
+	border-radius: 37px;
+	margin-top: 15px;
+	margin-left: 105px;
+	font-family : play;
+}
+
+#boutton_valider_groupe:hover
+{
+	box-shadow : 0px 0px 10px white;
+}
+
 #profil
 {
 	border: 1px solid #FFF;
@@ -627,8 +690,8 @@ font-size: 23px;
 }
 
 @font-face {
-    font-family: 'chrome';
-    src: url('Chrome-Normal.ttf');
+    font-family: 'price';
+    src: url('pricedown.ttf');
 }
 
 @font-face {
